@@ -31,6 +31,16 @@ main(int argc, char *argv[])
 #else
 	printf("no symbol for _SC_ATEXIT_MAX\n");
 #endif
+#ifdef CHARCLASS_NAME_MAX
+	printf("CHARCLASS_NAME_MAX defined to be %ld\n", (long)CHARCLASS_NAME_MAX+0);
+#else
+	printf("no symbol for CHARCLASS_NAME_MAX\n");
+#endif
+#ifdef _SC_CHARCLASS_NAME_MAX
+	pr_sysconf("CHARCLASS_NAME_MAX =", _SC_CHARCLASS_NAME_MAX);
+#else
+	printf("no symbol for _SC_CHARCLASS_NAME_MAX\n");
+#endif
 #ifdef CHILD_MAX
 	printf("CHILD_MAX defined to be %ld\n", (long)CHILD_MAX+0);
 #else
@@ -40,6 +50,16 @@ main(int argc, char *argv[])
 	pr_sysconf("CHILD_MAX =", _SC_CHILD_MAX);
 #else
 	printf("no symbol for _SC_CHILD_MAX\n");
+#endif
+#ifdef clock_ticks_second
+	printf("clock_ticks_second defined to be %ld\n", (long)clock_ticks_second+0);
+#else
+	printf("no symbol for clock_ticks_second\n");
+#endif
+#ifdef _SC_CLK_TCK
+	pr_sysconf("clock_ticks_second =", _SC_CLK_TCK);
+#else
+	printf("no symbol for _SC_CLK_TCK\n");
 #endif
 #ifdef COLL_WEIGHTS_MAX
 	printf("COLL_WEIGHTS_MAX defined to be %ld\n", (long)COLL_WEIGHTS_MAX+0);
