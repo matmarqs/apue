@@ -48,3 +48,10 @@ char *path_alloc(size_t *sizep) /* also return allocated size, if nonnull */
         *sizep = size;
     return ptr;
 }
+
+int main() {
+    size_t size;
+    path_alloc(&size);
+    printf("path = %lu\n", size);
+    return 0;
+}
