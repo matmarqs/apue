@@ -13,6 +13,11 @@
 #endif
 
 #include <sys/types.h>		/* some systems still require this */
+
+#if defined(__linux__)
+#include <sys/sysmacros.h>      /* needed by 'major' and 'minor' macros */
+#endif
+
 #include <sys/stat.h>
 #include <sys/termios.h>	/* for winsize */
 #if defined(MACOS) || !defined(TIOCGWINSZ)

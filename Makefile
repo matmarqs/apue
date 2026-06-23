@@ -7,7 +7,7 @@ TARGETS := $(PROGRAMS:.c=.out)
 
 all: $(TARGETS)
 
-%.out: %.c lib/error.o
+%.out: %.c lib/error.o lib/pathalloc.o
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 lib/%.o: lib/%.c include/apue.h
