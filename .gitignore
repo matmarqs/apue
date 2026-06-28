@@ -5,3 +5,4 @@
 **/*.o
 **/.cache/
 compile_commands.json
+ignore/
